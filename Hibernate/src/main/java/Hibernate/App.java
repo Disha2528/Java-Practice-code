@@ -1,3 +1,4 @@
+package Hibernate;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -7,8 +8,6 @@ import org.hibernate.cfg.Configuration;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.*;
-
-import java.io.PrintStream;
 
 
 public class App {
@@ -31,7 +30,7 @@ public class App {
 
         //Creating object of Address
         Address ad= new Address();
-        ad.setAddressId(1);
+        ad.setAddressId(10);
         ad.setCity("Amd");
         ad.setAddedDate(new Date());
         ad.setOpen(true);

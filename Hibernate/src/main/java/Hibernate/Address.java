@@ -1,3 +1,5 @@
+package Hibernate;
+
 import jakarta.persistence.*;
 import java.util.*;
 
@@ -76,6 +78,11 @@ public class Address {
 
     public byte[] getImage() {
         return image;
+    }
+
+    @Override
+    public String toString() {
+        return addressId+":" + city+":"+ street ;
     }
 
     public void setImage(byte[] image) {
