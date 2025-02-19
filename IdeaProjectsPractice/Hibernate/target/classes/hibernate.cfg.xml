@@ -1,0 +1,27 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "https://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/User</property>
+        <property name="hibernate.connection.username">admin</property>
+        <property name="hibernate.connection.password">HelloWorld@2528</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <mapping class="Hibernate.Student"/>
+        <mapping class="Hibernate.Address"/>
+        <mapping class="Hibernate.EmDemo"/>
+        <mapping class="HibernateMap.oneToone.Question"/>
+        <mapping class="HibernateMap.oneToone.Answer"/>
+        <mapping class="HibernateMap.oneTomany.Answer1"/>
+        <mapping class="HibernateMap.oneTomany.Question1"/>
+        <mapping class="HibernateMap.manyTomany.MapDemo2"/>
+        <mapping class="HibernateMap.manyTomany.Emp"/>
+        <mapping class="HibernateMap.manyTomany.Project"/>
+        <mapping class="HQLqueries.pagination"/>
+        <mapping class="HQLqueries.NQ"/>
+    </session-factory>
+</hibernate-configuration>
