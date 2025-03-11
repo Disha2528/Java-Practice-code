@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class MyController {
@@ -30,8 +29,16 @@ public class MyController {
 
     //get course by id
     @GetMapping("/courses/{courseId}")
-    public Optional<Course> getCourseById(@PathVariable String courseId){
-        return this.courseservice.getCourseById(Long.parseLong(courseId));
+    public Course getCourseById(@PathVariable String courseId) throws courseNotFoundException {
+
+
+        Course course= courseservice.getCourseById(Long.parseLong(courseId)).orElse(null);
+
+        if(course==null){
+            throw new courseNotFoundException("Course not Found");
+        }
+
+        return course;
     }
 
     //add a new Course
@@ -60,7 +67,6 @@ public class MyController {
             }
 
         }
-
 
 
 
