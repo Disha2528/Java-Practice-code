@@ -29,9 +29,9 @@ public class SalaryDetail {
         this.id = id;
         this.basicSalary = basicSalary;
         this.hra = hra;
-        this.total = basicSalary + hra + bonus;
         this.bonus = total*0.10;
         this.deductions = deductions;
+        this.total = basicSalary + hra + bonus + deductions;
         this.netSalary = total - deductions;
         this.employee = employee;
     }

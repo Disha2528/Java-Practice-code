@@ -66,9 +66,6 @@ public class EmpServiceImpl implements EmpService {
     }
 
 
-
-
-
     @Override
     public List<Employee> getAllEmployee() {
         return employeeRepository.findAll();
