@@ -22,7 +22,7 @@ public class SalaryDetailController {
         return salaryDetailService.getAllSalaries();
     }
 
-    @PostMapping("/updateSalary/{salaryDetailDTO}")
+    @PostMapping("/updateSalary")
     public SalaryDetail updateSalary(@PathVariable SalaryDetailDTO salaryDetailDTO) throws EmployeeNotFoundException, InvalidSalaryException {
         return salaryDetailService.updateSalary(salaryDetailDTO);
 

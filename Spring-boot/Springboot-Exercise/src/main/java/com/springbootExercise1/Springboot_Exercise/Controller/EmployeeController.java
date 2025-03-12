@@ -107,7 +107,7 @@ public class EmployeeController {
     }
 
 
-    @GetMapping("/salaryRange/{minSalary}/{maxSalary}")
+    @GetMapping("/salaryRange/{salaryRangeDTO}")
     public ResponseEntity<ResponseHandler> getEmployeesBySalaryRange(SalaryRangeDTO salaryRangeDTO) {
         List<Employee> employees = empService.getEmployeesBySalaryRange(salaryRangeDTO);
         ResponseHandler response = new ResponseHandler(

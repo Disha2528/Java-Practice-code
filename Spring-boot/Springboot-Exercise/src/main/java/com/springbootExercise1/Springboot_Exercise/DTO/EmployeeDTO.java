@@ -13,7 +13,7 @@ public class EmployeeDTO {
     private Department dept;
     private List<String> projects;
     private double salary;
-    private String Role;
+    private String role;
 
     public EmployeeDTO() {
     }
@@ -24,7 +24,7 @@ public class EmployeeDTO {
         this.dept = dept;
         this.projects = projects;
         this.salary = salary;
-        Role = role;
+        this.role = role;
     }
 
     public int getId() {
@@ -68,10 +68,10 @@ public class EmployeeDTO {
     }
 
     public String getRole() {
-        return Role;
+        return role;
     }
 
     public void setRole(String role) {
-        Role = role;
+        this.role = role;
     }
 }
